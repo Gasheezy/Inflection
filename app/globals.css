@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #1e2761;
+  --deep-navy: #12173f;
+  --card-navy: #232c6b;
+  --ice: #cadcfc;
+  --gold: #d4af37;
+  --gold-deep: #8b6914;
+  --charcoal: #36454f;
+  --off-white: #f7f8fc;
+  --white: #ffffff;
+
+  --background: var(--off-white);
+  --foreground: var(--charcoal);
+
+  --font-display: Cambria, Georgia, serif;
+  --font-body: Calibri, "Segoe UI", Arial, sans-serif;
+}
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-deep-navy: var(--deep-navy);
+  --color-card-navy: var(--card-navy);
+  --color-ice: var(--ice);
+  --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
+  --color-charcoal: var(--charcoal);
+  --color-off-white: var(--off-white);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+.gold-rule {
+  width: 3rem;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-deep));
+  border: none;
+}
+
+.radial-glow {
+  background-image:
+    radial-gradient(circle at 20% 0%, rgba(212, 175, 55, 0.12), transparent 55%),
+    radial-gradient(circle at 85% 20%, rgba(202, 220, 252, 0.08), transparent 45%);
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
